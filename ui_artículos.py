@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import ttk
-import  G8_datbase
+import  G8_database
 
 
 window=Tk()
@@ -66,8 +66,8 @@ can = StringVar()
 def show_users():
     fila = 0 
     print(fila)
-    print('data resultado: ' + str(G8_datbase.data))
-    for user in G8_datbase.data:
+    print('data resultado: ' + str(G8_database.data))
+    for user in G8_database.data:
         registro = user
         print ('variable registro: ' + str(registro))
         
@@ -83,13 +83,13 @@ def xxx():
     id_area = entry_can.get()
   
    
-    lol_db = G8_datbase.MyDatabase()
+    lol_db = G8_database.MyDatabase()
     lol_db.insert_db(nombre_de_articulo, precio_unitario, id_area)
     lol_db.read_db()
     show_users()
      
 def leer():
-    lol_db = G8_datbase.MyDatabase()
+    lol_db = G8_database.MyDatabase()
     lol_db.read_db()
 
 
